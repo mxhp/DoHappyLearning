@@ -26,7 +26,7 @@ public class StartActivity extends BaseActivity<StartPresenter> implements Start
 
     @Override
     protected StartPresenter createPresenter() {
-        return new StartPresenter();
+        return new StartPresenter(this);
     }
 
     @Override

@@ -7,12 +7,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.gyf.immersionbar.components.ImmersionFragment;
 import com.happylearning.utilapplication.contract.BaseContract;
 import com.happylearning.utilapplication.presenter.BasePresenter;
 
 import org.greenrobot.eventbus.EventBus;
 
-public abstract class BaseFragment<P extends BasePresenter> extends Fragment implements BaseContract.View {
+public abstract class BaseFragment<P extends BasePresenter> extends ImmersionFragment implements BaseContract.View {
 
     /**
      * rootView是否初始化标志，防止回调函数在rootView为空的时候触发

@@ -1,6 +1,8 @@
 package com.happylearning.utilapplication.presenter;
 
 
+import android.app.Activity;
+
 import com.happylearning.utilapplication.contract.BaseContract;
 import com.happylearning.utilapplication.model.BaseModel;
 
@@ -10,6 +12,11 @@ public abstract class BasePresenter<V extends BaseContract.View, M extends BaseM
 
     protected WeakReference<V> mViewRef;
     private WeakReference<M> mModelRef;
+    protected WeakReference<Activity> mActivity;
+
+    public BasePresenter(Activity activity) {
+        this.mActivity = new WeakReference<>(activity);
+    }
 
     public BasePresenter() {
         mModelRef = new WeakReference<>(createModel());
