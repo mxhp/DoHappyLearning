@@ -59,6 +59,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        loaded();
         mPresenter.detachView();
         mPresenter = null;
     }
